@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uygulama hakkında — İndirim Koparan Publisher</title>
+<meta name="description" content="İndirim Koparan Publisher, yalnızca İndirim Koparan markasının yetkili hesabı tarafından kullanılan dahili bir içerik yayınlama aracıdır.">
+<style>
+:root{
+  --canvas:#FFFFFF;
+  --surface:#F9F8F7;
+  --border:#E6E5E3;
+  --text:#2C2C2B;
+  --text-2:#6E6B66;
+  --accent:#1C6FBF;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --canvas:#191919;
+    --surface:#202020;
+    --border:rgba(255,255,255,.20);
+    --text:#FFFFFF;
+    --text-2:rgba(255,255,255,.65);
+    --accent:#5E9FE8;
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--canvas);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.5;
+}
+.wrap{max-width:760px;margin:0 auto;padding-left:32px;padding-right:32px}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.site-header{border-bottom:1px solid var(--border)}
+.site-header .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap;max-width:1040px;
+}
+.wordmark{font-size:16px;font-weight:700;letter-spacing:-.01em;color:var(--text);text-decoration:none}
+.site-nav{display:flex;gap:24px;flex-wrap:wrap}
+.site-nav a{
+  color:var(--text-2);text-decoration:none;font-size:14px;
+  display:inline-flex;align-items:center;min-height:44px;
+}
+.site-nav a:hover{color:var(--text)}
+main{padding-top:48px;padding-bottom:32px}
+h1{font-size:32px;line-height:1.2;letter-spacing:-.02em;margin:0 0 12px;font-weight:700}
+.lede{font-size:18px;color:var(--text-2);margin:0 0 40px;max-width:620px}
+h2{font-size:20px;margin:40px 0 12px;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 16px}
+ul{margin:0 0 16px;padding-left:22px}
+li{margin-bottom:8px}
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  padding:24px;margin:0 0 16px;
+}
+.card p:last-child{margin-bottom:0}
+.site-footer{border-top:1px solid var(--border);padding-top:24px;padding-bottom:48px}
+.site-footer .wrap{max-width:1040px}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;margin:0;padding:0;list-style:none}
+.footer-links a{
+  color:var(--text-2);text-decoration:none;font-size:14px;
+  display:inline-flex;align-items:center;min-height:44px;
+}
+.footer-links a:hover{color:var(--text)}
+@media (max-width:720px){
+  .wrap{padding-left:24px;padding-right:24px}
+  h1{font-size:27px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="/">İndirim Koparan</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/app.html">Uygulama</a>
+      <a href="/privacy.html">Gizlilik</a>
+      <a href="/terms.html">Şartlar</a>
+      <a href="https://t.me/indirim_koparan">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>İndirim Koparan Publisher</h1>
+  <p class="lede">Fırsat içeriklerini güvenli ve kontrollü biçimde yayımlayan içerik aracı</p>
+
+  <h2>Uygulama hakkında</h2>
+  <div class="card">
+    <p>
+      İndirim Koparan Publisher, yalnızca İndirim Koparan markasının yetkili hesabı
+      tarafından kullanılan dahili bir içerik yayınlama aracıdır. Hazırlanan dikey ürün
+      videolarını hesap sahibinin onayıyla TikTok ve diğer sosyal medya hesaplarında
+      yayımlamaya yardımcı olur.
+    </p>
+    <ul>
+      <li>Ürün videosu ve açıklaması hazırlanır.</li>
+      <li>Yayın öncesinde içerik hesap sahibi tarafından kontrol edilir.</li>
+      <li>Yetkilendirme, platformların resmî API ve OAuth yöntemleriyle yapılır.</li>
+      <li>Uygulama TikTok şifresini istemez veya saklamaz.</li>
+    </ul>
+  </div>
+
+  <h2>English summary</h2>
+  <div class="card">
+    <p>
+      Indirim Koparan Publisher is an internal content publishing tool used only by the
+      authorized owner of the Indirim Koparan brand. It helps prepare and publish
+      short-form product videos after owner review, using official platform APIs and
+      OAuth authorization. The app never asks for or stores a TikTok password.
+    </p>
+  </div>
+
+  <h2>İletişim</h2>
+  <p>Sorular ve veri talepleri için: <a href="https://t.me/indirim_koparan">t.me/indirim_koparan</a></p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="footer-links">
+      <li><a href="/">Ana sayfa</a></li>
+      <li><a href="/privacy.html">Gizlilik Politikası</a></li>
+      <li><a href="/terms.html">Kullanım Şartları</a></li>
+      <li><a href="/data-deletion.html">Veri Silme</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

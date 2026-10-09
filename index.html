@@ -1,7 +1,255 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>İndirim Koparan Publisher</title><meta name="description" content="İndirim Koparan markasının sosyal medya içerik yayınlama aracı."><link rel="icon" href="assets/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="stylesheet" href="assets/style.css"></head><body>
-<header><div class="wrap"><img class="mark" src="assets/app-icon.png" alt="İndirim Koparan uygulama ikonu"><div><h1>İndirim Koparan</h1><p>Fırsat içeriklerini güvenli ve kontrollü biçimde yayımlayan içerik aracı</p></div></div></header>
-<nav class="nav"><div class="wrap"><a href="index.html">Ana Sayfa</a> · <a href="privacy.html">Gizlilik</a> · <a href="terms.html">Hizmet Şartları</a> · <a href="data-deletion.html">Veri Silme</a></div></nav>
-<main class="wrap"><section class="card"><h2>Uygulama hakkında</h2><p><strong>İndirim Koparan Publisher</strong>, yalnızca İndirim Koparan markasının yetkili hesabı tarafından kullanılan dahili bir içerik yayınlama aracıdır. Hazırlanan dikey ürün videolarını hesap sahibinin onayıyla TikTok ve diğer sosyal medya hesaplarında yayımlamaya yardımcı olur.</p><ul><li>Ürün videosu ve açıklaması hazırlanır.</li><li>Yayın öncesinde içerik hesap sahibi tarafından kontrol edilir.</li><li>Yetkilendirme, platformların resmî API ve OAuth yöntemleriyle yapılır.</li><li>Uygulama TikTok şifresini istemez veya saklamaz.</li></ul><p><a class="button" href="https://t.me/indirim_koparan" rel="noopener">Telegram kanalına git</a></p></section>
-<section class="card"><h2>English summary</h2><p>Indirim Koparan Publisher is an internal content publishing tool used only by the authorized owner of the Indirim Koparan brand. It helps prepare and publish short-form product videos after owner review, using official platform APIs and OAuth authorization. The app never asks for or stores a TikTok password.</p></section>
-<section class="card"><h2>İletişim</h2><p>Sorular ve veri talepleri için: <a href="https://t.me/indirim_koparan" rel="noopener">t.me/indirim_koparan</a></p></section></main>
-<footer><div class="wrap">© 2026 İndirim Koparan · <a href="privacy.html">Gizlilik Politikası</a> · <a href="terms.html">Hizmet Şartları</a></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İndirim Koparan — Fırsat içerikleri, otomatik</title>
+<meta name="description" content="İndirim Koparan; Amazon, Trendyol, n11 ve Hepsiburada ürünlerini tarayıp günde 10 fırsat içeriğini otomatik hazırlayan ve yayımlayan bir içerik sistemidir.">
+<style>
+:root{
+  --canvas:#FFFFFF;
+  --surface:#F9F8F7;
+  --surface-2:#F0EFED;
+  --border:#E6E5E3;
+  --text:#2C2C2B;
+  --text-2:#6E6B66;
+  --accent:#1C6FBF;
+  --accent-soft:#E5F2FC;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --canvas:#191919;
+    --surface:#202020;
+    --surface-2:#383836;
+    --border:rgba(255,255,255,.20);
+    --text:#FFFFFF;
+    --text-2:rgba(255,255,255,.65);
+    --accent:#5E9FE8;
+    --accent-soft:rgba(94,159,232,.14);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--canvas);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.5;
+}
+.wrap{max-width:1040px;margin:0 auto;padding-left:32px;padding-right:32px}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* header */
+.site-header{border-bottom:1px solid var(--border)}
+.site-header .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap;
+}
+.wordmark{font-size:16px;font-weight:700;letter-spacing:-.01em;color:var(--text);text-decoration:none}
+.site-nav{display:flex;gap:24px;flex-wrap:wrap}
+.site-nav a{
+  color:var(--text-2);text-decoration:none;font-size:14px;
+  display:inline-flex;align-items:center;min-height:44px;
+}
+.site-nav a:hover{color:var(--text)}
+
+/* hero */
+.hero{padding-top:64px;padding-bottom:48px}
+.eyebrow{
+  display:inline-block;
+  font-size:14px;font-weight:600;letter-spacing:.02em;
+  color:var(--accent);background:var(--accent-soft);
+  padding:4px 12px;border-radius:8px;margin:0 0 24px;
+}
+h1{font-size:44px;line-height:1.15;letter-spacing:-.02em;margin:0 0 16px;font-weight:700}
+.lede{font-size:19px;line-height:1.5;color:var(--text-2);margin:0;max-width:660px}
+
+/* sections */
+section{padding-top:48px;padding-bottom:48px}
+.section-title{font-size:24px;line-height:1.25;letter-spacing:-.01em;margin:0 0 8px;font-weight:700}
+.section-note{color:var(--text-2);margin:0 0 32px;max-width:660px}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.steps li{
+  background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  padding:24px;display:flex;gap:16px;align-items:flex-start;
+}
+.step-num{
+  flex:0 0 auto;width:28px;height:28px;border-radius:8px;
+  background:var(--canvas);border:1px solid var(--border);
+  color:var(--text-2);font-size:14px;font-weight:600;
+  display:flex;align-items:center;justify-content:center;
+}
+.step-body h3{font-size:16px;font-weight:600;margin:0 0 4px}
+.step-body p{margin:0;color:var(--text-2);font-size:15px}
+
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0;padding:0}
+.fact{border:1px solid var(--border);border-radius:8px;padding:24px}
+.fact dt{font-size:14px;color:var(--text-2);margin:0 0 8px}
+.fact dd{margin:0;font-size:28px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.fact dd span{display:block;font-size:15px;font-weight:400;color:var(--text-2);margin-top:4px;letter-spacing:0}
+
+/* platforms */
+.platforms{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 0;padding:0;list-style:none}
+.platforms li{
+  font-size:14px;color:var(--text-2);
+  border:1px solid var(--border);border-radius:8px;padding:6px 12px;
+}
+
+/* english block */
+.english{
+  background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  padding:32px;max-width:760px;
+}
+.english h2{font-size:20px;margin:0 0 12px;font-weight:700}
+.english p{margin:0 0 12px;color:var(--text-2)}
+.english p:last-child{margin-bottom:0}
+
+/* footer */
+.site-footer{border-top:1px solid var(--border);padding-top:32px;padding-bottom:48px;margin-top:16px}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap;margin:0 0 16px;padding:0;list-style:none}
+.footer-links a{
+  color:var(--text-2);text-decoration:none;font-size:14px;
+  display:inline-flex;align-items:center;min-height:44px;
+}
+.footer-links a:hover{color:var(--text)}
+.footer-note{color:var(--text-2);font-size:14px;margin:0}
+
+@media (max-width:720px){
+  .wrap{padding-left:24px;padding-right:24px}
+  .hero{padding-top:48px;padding-bottom:32px}
+  h1{font-size:34px}
+  .lede{font-size:17px}
+  .steps{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .english{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="/">İndirim Koparan</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/app.html">Uygulama</a>
+      <a href="/privacy.html">Gizlilik</a>
+      <a href="/terms.html">Şartlar</a>
+      <a href="https://t.me/indirim_koparan">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero wrap">
+    <p class="eyebrow">İçerik otomasyonu</p>
+    <h1>Fırsat içerikleri,<br>otomatik üretilir ve yayımlanır.</h1>
+    <p class="lede">
+      İndirim Koparan; dört pazar yerindeki indirimli ürünleri toplar, Türkçe ürün metnini
+      ve dikey videoyu otomatik hazırlar, yayına hazır hale getirir. Günde 10 ürün,
+      elle tek tek uğraşmadan.
+    </p>
+  </div>
+
+  <section class="wrap" aria-labelledby="how">
+    <h2 class="section-title" id="how">Nasıl çalışıyor</h2>
+    <p class="section-note">Tek komutla çalışan dört aşamalı bir hat.</p>
+    <ol class="steps">
+      <li>
+        <span class="step-num" aria-hidden="true">1</span>
+        <div class="step-body">
+          <h3>Ürün toplanır</h3>
+          <p>Amazon, Trendyol, n11 ve Hepsiburada listelerinden indirimli ürünler çekilir.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num" aria-hidden="true">2</span>
+        <div class="step-body">
+          <h3>İçerik üretilir</h3>
+          <p>Ürün özeti, açıklama ve hashtag'ler dil modeliyle Türkçe olarak yazılır.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num" aria-hidden="true">3</span>
+        <div class="step-body">
+          <h3>Video hazırlanır</h3>
+          <p>Ürün görselinden dikey kısa video, yayın formatında otomatik üretilir.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num" aria-hidden="true">4</span>
+        <div class="step-body">
+          <h3>Yayımlanır</h3>
+          <p>İçerik kanallara gönderilir ve ürün kaydı veritabanına işlenir.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="wrap" aria-labelledby="scope">
+    <h2 class="section-title" id="scope">Kapsam</h2>
+    <p class="section-note">Sistemin bugün ürettiği hacim.</p>
+    <dl class="facts">
+      <div class="fact">
+        <dt>Pazar yeri</dt>
+        <dd>4<span>Amazon, Trendyol, n11, Hepsiburada</span></dd>
+      </div>
+      <div class="fact">
+        <dt>Günlük üretim</dt>
+        <dd>10<span>ürün / gün</span></dd>
+      </div>
+      <div class="fact">
+        <dt>Yayın kanalı</dt>
+        <dd>3<span>Telegram, Instagram, YouTube</span></dd>
+      </div>
+    </dl>
+    <ul class="platforms">
+      <li>TikTok — üretim erişimi onay sürecinde</li>
+      <li>Python hattı + SQLite kayıt</li>
+      <li>Dil modeliyle içerik üretimi</li>
+      <li>Otomatik dikey video</li>
+    </ul>
+  </section>
+
+  <section class="wrap" aria-labelledby="en">
+    <h2 class="section-title" id="en">English summary</h2>
+    <p class="section-note">For platform and partner reviews.</p>
+    <div class="english">
+      <h2>Indirim Koparan</h2>
+      <p>
+        Indirim Koparan is an AI-powered deal publishing system for the Turkish market.
+        A local pipeline collects discounted products from Amazon, Trendyol, n11 and
+        Hepsiburada, generates Turkish product copy and hashtags with a language model,
+        renders vertical short-form videos automatically, and publishes the result to
+        Telegram, Instagram and YouTube — about 10 products per day.
+      </p>
+      <p>
+        Built and operated solo since 2026. TikTok publishing is pending platform review.
+        Questions and data requests: <a href="https://t.me/indirim_koparan">t.me/indirim_koparan</a>.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="footer-links">
+      <li><a href="/app.html">Uygulama hakkında</a></li>
+      <li><a href="/privacy.html">Gizlilik Politikası</a></li>
+      <li><a href="/terms.html">Kullanım Şartları</a></li>
+      <li><a href="/data-deletion.html">Veri Silme</a></li>
+      <li><a href="https://t.me/indirim_koparan">Telegram</a></li>
+    </ul>
+    <p class="footer-note">© 2026 İndirim Koparan · indirimkoparan.com</p>
+  </div>
+</footer>
+
+</body>
+</html>
